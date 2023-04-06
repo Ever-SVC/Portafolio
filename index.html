@@ -6,27 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/smartphone.css">
     <title>Portafolio</title>
 </head>
 <body>
-    <header class="wrapper">
+    <header id="inicio">
         <nav>
-            <a href="#" class="logo">LOGO</a>
+            <a href="#" class="logo">
+                <h1><span>E</span>ver<span>-</span>VC</h1>
+            </a>
             <input type="checkbox" name="" id="toggle">
-            <label for="toggle"><i class="material-icons">menu</i></label>
+            <label for="toggle"><img src="./images/menu.png" alt=""></label>
             <section class="menu">
                 <ul>
-                    <form class="search-box">
-                        <input type="text" placeholder=" ">
-                        <button type="reset"></button>
-                    </form>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#">Acerca de mí</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
                 </ul>
             </section>
         </nav>
     </header>
+    <main>
+        <article class="datos_personales">
+            <img src="./images/perfil.jpg" alt="" class="foto_perfil">
+            <article class="info">
+                <h1>DATOS PERSONALES:</h1>
+                <div class="dato">
+                    <img src="./images/user.png" alt="">
+                    <p>Ever Samuel Vásquez Canales.</p>
+                </div>
+                <div class="dato">
+                    <img src="./images/inicio.png" alt="">
+                    <p>San Francisco Gotera, Morazán.</p>
+                </div>
+                <div class="dato">
+                    <img src="./images/email.png" alt="">
+                    <a href="mailto:ever-vasquez27@hotmial.com"><p>ever-vasquez27@hotmial.com.</p></a>
+                </div>
+                <div class="dato">
+                    <img src="./images/github.png" alt="">
+                    <a href="https://github.com/Ever-Vasquez"><p>Ever Vásquez</p></a>
+                </div>
+            </article>
+        </article>
+        <article class="formacion">
+            <article class="descripcion">
+                <h1>PERFIL PROFESIONAL:</h1>
+                <hr>
+                <p>
+                    Graduado como Técnico Vocacional en Desarrollo de Software con experiencia en el
+                    uso de herramientas tecnológicas y habilidades blandas para crear soluciones efectivas
+                    y de calidad. Me he involucrado en proyectos de Programación Orientada a Objetos, 
+                    Bases de Datos y Desarrollo Web. Me gusta mantenerme informado sobre las noticas
+                    relacionadas al mundo de la programación, la informáticas y tecnología en general, soy una
+                    persona proactiva y autodidacta a la hora de aprender cosas nuevas.
+                </p>
+            </article>
+            <article class="estudio">
+
+            </article>
+        </article>
+    </main>
 </body>
 </html>

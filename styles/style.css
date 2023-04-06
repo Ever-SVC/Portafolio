@@ -1,8 +1,14 @@
-.wrapper {
+body {
+    background: linear-gradient(
+        to right,
+        #0f0c29,
+        #302b63
+    );
+}
+
+header {
     width: 100%;
-    max-width: 1000px;
     margin: 0 auto;
-    padding: 1rem;
 }
 
 nav {
@@ -11,18 +17,53 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: hsl(283, 100%, 13%);
-    padding: 1rem 1.5rem;
-    border-radius: 0.4rem;
+    padding: 0 20px 0 20px;
 }
 
-nav .logo {
-    font-weight: 700;
+.logo h1{
+    position: relative;
+    margin: 0; 
+    font-size: 30px;
+    font-weight: 900;
+    z-index: 1;
+    overflow: hidden;
 }
+
+.logo h1::before {
+    content: '';
+    position: absolute;
+    left: 110%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, transparent 0%, hsl(283, 100%, 13%) 5%, hsl(283, 100%, 13%) 100%
+    );
+    animation: animate 3s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        left: -20%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.logo h1 span {
+    color: #02ff2c;
+}
+
+
+/* nav .logo {
+    font-size: 30px;
+    font-weight: bold;
+} */
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    align-items: center;
 }
 
 nav a {
@@ -34,22 +75,112 @@ nav #toggle, nav label {
     display: none;
 }
 
-.search-box {
-    font-size: 20px;
-    border: solid 0.3em;
-    display: inline-block;
-    position: relative;
-    border-radius: 2.5em;
+.menu ul a {
+    height: 2rem;
+    padding: 15px;
+    display: flex;
+    align-items: center;
 }
 
-.search-box input[type=text] {
-    font-family: inherit;
+.menu ul a:hover {
+    background-color: darkslateblue;
+    /* border-radius: 0.4rem; */
+}
+
+main {
+    width: calc(100% - calc(1rem + 20px));
+    height: calc(100vh 94px);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "datos_personales formacion"
+    ;
+    column-gap: 10px;
+    padding: 1rem;
+}
+
+.datos_personales {
+    grid-area: datos_personales;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr auto;
+    grid-template-areas: 
+    "imagen"
+    "info"
+    ;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.formacion {
+    grid-area: formacion;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "descripcion"
+    "estudio"
+    ;
+    row-gap: 1rem;
+}
+
+.foto_perfil {
+    grid-area: imagen;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.info {
+    grid-area: info;
+    padding: 5%;
+    text-align: center;
+}
+
+.info h1 {
+    color: #555555;
     font-weight: bold;
-    width: 2.5em;
-    height: 2.5em;
-    padding: 0.3em 2.1 0.4em;
-    border: none;
-    box-sizing: border-box;
-    border-radius: 2.5em;
+    font-size: 22px;
+    margin-bottom: 25px;
 }
 
+.dato {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.dato a {
+    text-decoration: none;
+}
+
+.dato p, .descripcion p {
+    font-size: 17px;
+    color: rgb(85, 97, 107);
+}
+
+.dato img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.descripcion {
+    grid-area: descripcion;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.descripcion h1 {
+    color: #555555;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.estudio {
+    grid-area: estudio;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
