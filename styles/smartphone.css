@@ -37,11 +37,11 @@
         row-gap: 10px;
     }
 
-    .info h1, .encabezado-descrip h1 {
-        font-size: 32px;
+    /* .info h1, .encabezado-descrip h1 {
+        font-size: 26px;
     }
 
     .dato p, .descripcion p {
-        font-size: 22px;
-    }
+        font-size: 20px;
+    } */
 }
