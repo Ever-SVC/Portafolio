@@ -89,7 +89,7 @@ main {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "datos_personales formacion"
+        "datos_personales sobremi"
     ;
     column-gap: 10px;
     padding: 1rem;
@@ -119,8 +119,8 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 0.6fr auto;/* 1fr 1.6fr */
     grid-template-areas: 
-        "descripcion"
-        "estudio"
+        "perfil"
+        "formacion"
     ;
     row-gap: 1rem;
 }
