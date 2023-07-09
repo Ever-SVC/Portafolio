@@ -84,7 +84,7 @@ nav #toggle, nav label {
 
 main {
     width: calc(100% - calc(1rem + 20px));
-    /* height: calc(100vh 94px); */
+    height: calc(100vh - 94px);
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
@@ -108,12 +108,16 @@ main {
     border-radius: 10px;
 }
 
-.formacion {
-    grid-area: formacion;
+.titulo {
+    margin-left: 10px;
+}
+
+.sobremi {
+    grid-area: sobremi;
     border-radius: 5px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1.6fr;
+    grid-template-rows: 0.6fr auto;/* 1fr 1.6fr */
     grid-template-areas: 
         "descripcion"
         "estudio"
@@ -146,11 +150,11 @@ main {
     align-items: center;
 }
 
-.dato a {
+a {
     text-decoration: none;
 }
 
-.dato p, .descripcion p {
+.dato p, .perfil p {
     font-size: 17px;
     color: rgb(85, 97, 107);
     line-height: normal;
@@ -161,14 +165,14 @@ main {
     margin-right: 10px;
 }
 
-.descripcion {
-    grid-area: descripcion;
+.perfil {
+    grid-area: perfil;
     background-color: white;
     border-radius: 10px;
     padding: 15px;
 }
 
-.descripcion p span {
+.perfil p span {
     font-style: italic;
     font-weight: bold;
 }
@@ -188,9 +192,141 @@ main {
     font-size: 22px;
 }
 
-.estudio {
-    grid-area: estudio;
+.conocimientos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;/* 1fr 1.6fr */
+    grid-template-areas: 
+    "habil1 habil2"
+    ;
+    row-gap: 1rem;
+}
+
+.habil1, .habil2 {
+    width: 90%;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(85, 97, 107);
+}
+
+.habil1 {
+    grid-area: habil1;
+}
+.habil2 {
+    grid-area: habil2;
+}
+
+.habil1, .habil2 {
+    font-size: 15px;
+}
+
+.container {
+    width: 100%;
+    height: 15px;
+    background-color: rgb(217, 217, 217);
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 15px;
+}
+
+.Csharp, .Java {
+    width: 65%;
+    height: 15px;
+}
+
+.Cpp {
+    width: 40%;
+    height: 15px;
+}
+
+.Python {
+    width: 30%;
+    height: 15px;
+}
+
+.sql {
+    width: 70%;
+    height: 15px;
+}
+
+.javascript {
+    width: 30%;
+    height: 15px;
+}
+
+.html {
+    width: 90%;
+    height: 15px;
+}
+
+.css {
+    width: 80%;
+    height: 15px;
+}
+
+.sass {
+    width: 40%;
+    height: 15px;
+}
+
+.git {
+    width: 90%;
+    height: 15px;
+}
+
+.Csharp, .Cpp, .Python, .Java, .sql, .javascript, .html, .css, .sass, .git {
+    margin-top: 5px;
+    background-color: #07AD9F;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.formacion {
+    grid-area: formacion;
     background-color: white;
     border-radius: 10px;
     padding: 10px;
+}
+
+.estudio {
+    padding-left: 20px;
+}
+
+.descripEstudio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
+.descripEstudio img {
+    height: 20px;
+}
+
+.estudio h2 {
+    font-size: 19px;
+    color: rgb(85, 97, 107);
+}
+
+.estudio h3 {
+    margin-left: 10px;
+    font-size: 17px;
+    color: #07AD9F;
+}
+
+.estudio p {
+    margin-top: 15px;
+    font-size: 17px;
+    color: rgb(46, 46, 46);
+}
+
+.estudio a {
+    color: rgb(46, 46, 46);
+}
+
+.descripStudio img {
+    width: 30px;
+    margin-right: 10px;
 }
