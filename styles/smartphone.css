@@ -31,10 +31,21 @@
         grid-template-rows: auto;
         grid-template-areas: 
             "datos_personales"
-            "formacion"
+            "sobremi"
         ;
         column-gap: 0;
         row-gap: 10px;
+    }
+
+    main .conocimientos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;/* 1fr 1.6fr */
+        grid-template-areas: 
+        "habil1"
+        "habil2"
+        ;
+        row-gap: 1rem;
     }
 
     /* .info h1, .encabezado-descrip h1 {
